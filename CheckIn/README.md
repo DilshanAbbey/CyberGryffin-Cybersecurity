@@ -44,11 +44,13 @@ http://localhost:8080
 
 ### 🎯 Goal
 
-Gain initial access to the machine.
+Identifying different web application vulnerabilities.
+
+Gain initial access to the machine by stealing credentials through the identified web application vulnerabilities.
 
 Escalate privileges to root.
 
-Capture both user.txt and root.txt flags.
+Capture both user flag and root flag.
 
 ### 🛠 Requirements
 
