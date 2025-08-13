@@ -58,7 +58,7 @@ Docker installed on your system.
 
 ### 📜 License
 
-This project is the exclusive intellectual property of its owner.  
+This project is an exclusive intellectual property of its owner.  
 Unauthorized copying, modification, redistribution, or publication is strictly prohibited.  
 For permissions, please contact the repository owner.
 
