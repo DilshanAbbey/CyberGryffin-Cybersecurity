@@ -1,5 +1,6 @@
-# encryptor.py
-ALPHABET = "abcdefghijklmnopqrstuvwxyz_{}"
+import sys
+
+ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_{}"
 
 def encrypt(message):
     encrypted = ""
@@ -11,7 +12,21 @@ def encrypt(message):
         encrypted += ALPHABET[new_idx]
     return encrypted
 
-# Example usage
-message = "csc{easy_flag}"
-encrypted = encrypt(message)
-print("Encrypted Message:", encrypted)
+if len(sys.argv) != 2:
+    print(f"Usage: python3 {sys.argv[0]} <input_file>")
+    sys.exit(1)
+
+filename = sys.argv[1]
+
+try:
+    with open(filename, 'r') as f:
+        message = f.read().strip()
+except FileNotFoundError:
+    print(f"[!] File '{filename}' not found.")
+    sys.exit(1)
+
+try:
+    encrypted = encrypt(message)
+    print("Encrypted Message:", encrypted)
+except ValueError as ve:
+    print(f"[!] Encryption error: {ve}")
